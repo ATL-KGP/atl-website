@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ATL|Gallery</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href ="./css/gallery.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__checkbox" />
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+            </span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="index.html" class="navigation__link">Home</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="about.html" class="navigation__link">About ATL</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Projects</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="gallery.html" class="navigation__link">Gallery</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Blog</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Contact</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="SignIn-Up.html" class="navigation__link-logout">Sign In/Sign Up</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link-login">Dashboard</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" onclick="signOut()" class="navigation__link-login">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Gallery</span>
+                <span class="heading-primary--sub"></span>
+            </h1>
+           </div>
+    </header>
+    <!-- partial -->
+    <section class="container">
+        <div class="image-gallery">
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49359075391_0aac1de6de_k.jpg" width="1536" height="2048"
+                    alt="Street Art Los Angeles" class="item item1" />
+            </div>
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49359274717_53f16db5d0_k.jpg" width="2048" height="1536"
+                    alt="Paseo Público hacia el Astrup Fearnley Museet, Oslo" class="item item2" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49359272807_b3d8d130e7_k.jpg" width="1536" height="2048"
+                    alt="Salida del Acuario de Dinamarca en Kastrup" class="item item3" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49358596853_e51c4cafce_k.jpg" width="2048" height="2048"
+                    alt="VM House - Conjunto de viviendas por el estudio BIG en Copenhague" class="item item4" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49358596558_31c27cce2b_k.jpg" width="2048" height="1536"
+                    alt="Fachadas coloridas en Nyhavn, Copenhague" class="item item5" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49359271077_c4dbe057a9_k.jpg" width="1536" height="2048"
+                    alt="Morfología paramétrica en el Acuario de Dinamarca" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49358595383_dd87816f3e_k.jpg" width="2048" height="2048"
+                    alt="Frente de la Ópera de Copenhague" class="item item7" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49358613888_72d9ca85fd_k.jpg" width="1536" height="2048"
+                    alt="Bradbury Builnding Ojo de Pez" class="item item8" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49359065166_b0c6f641b2_k.jpg" width="1536" height="2048"
+                    alt="Street Art en las calles de Copenhague" class="item item9" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49358602418_659204324d_k.jpg" width="2048" height="2048"
+                    alt="8 House - Conjunto de viviendas del estudio BIG en Copenhague" class="item item10" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49359066071_ef16011a4e_k.jpg" width="1536" height="2048"
+                    alt="Paseo público en Copenhague" class="item item11" />
+            </div>
+    
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49358593803_94c505ed56_k.jpg" width="2048" height="1535"
+                    alt="Tranvía en las calles de Helsinski" class="item item12" />
+            </div>
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49359068106_5c48bacd62_k.jpg" width="1536" height="2048"
+                    alt="Oslo Palace" />
+            </div>
+            <div class="img">
+                <img src="https://live.staticflickr.com/65535/49358600543_d69ac81d6c_k.jpg" width="2048" height="873"
+                    alt="09082018-IMG_9919" />
+            </div>
+        </div>
+    </section>
+    
+    
+        <script src="./js/main.js"></script>
+        <script src="./js/firebaseConfig.js"></script>
+    
+    </body>
+    
+    </html>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+
+</body>
+
+</html>

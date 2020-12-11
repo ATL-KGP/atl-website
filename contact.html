@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ATL|Contact Us</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/contact.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__checkbox" />
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+            </span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="index.html" class="navigation__link">Home</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="about.html" class="navigation__link">About ATL</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="project.html" class="navigation__link">Projects</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="gallery.html" class="navigation__link">Gallery</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="blog.html" class="navigation__link">Blog</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="contact.html" class="navigation__link">Contact</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="SignIn-Up.html" class="navigation__link-logout">Sign In/Sign Up</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="userProfile.html" class="navigation__link-login">Dashboard</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" onclick="signOut()" class="navigation__link-login">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Contact Us</span>
+                <span class="heading-primary--sub"></span>
+            </h1>
+        </div>
+
+    </header>
+    <div class="container">
+        <div class="innerwrap">
+    
+            <section class="section1 clearfix">
+                <div class="textcenter">
+                    
+                    <h1>Drop Us a Mail</h1>
+                </div>
+            </section>
+    
+            <section class="section2 clearfix">
+                <div class="col2 column1 first">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14762.762697809032!2d87.32395453448495!3d22.327535373095383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x780a6ac624de6544!2sKendriya%20Vidyalaya%20No.-2!5e0!3m2!1sen!2sin!4v1601213078850!5m2!1sen!2sin"
+                        width="450" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                        tabindex="0"></iframe>
+           
+                </div>
+                <div class="col2 column2 last">
+                    <div class="sec2innercont">
+                        <div class="sec2addr">
+                            
+                            <h3>Address: Jhapatapur, South Side, Kharagpur, West Bengal 721301</h3> 
+                            <h3>Phone : </h3>
+                            <h3>Email: tinker.kharagpur@gmail.com</h3>
+                        </div>
+                    </div>
+                    <div class="sec2contactform">
+                        <form class="contact-form" method="POST">
+                            <div class="clearfix">
+                                <input class="col2 first" id="name" type="text" placeholder="Name">
+                                <input class="col2 last" id="sub" type="text" placeholder="Subject">
+                            </div>
+                            <div class="clearfix">
+                                <input class="col2 first" id="contact-email" type="Email" placeholder="Email">
+                                <input class="col2 last" id="contact-no" type="text" placeholder="Contact Number">
+                            </div>
+                            <div class="clearfix">
+                                <textarea name="textarea" id="msg" cols="30" rows="7" placeholder="Your Message"></textarea>
+                            </div>
+                            <div class="clearfix"><input type="submit" value="Send"></div>
+                        </form>
+                    </div>
+    
+                </div>
+            </section>
+    
+        </div>
+    </div>
+    <!-- partial -->
+
+    <script src="./js/main.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</body>
+
+</html>

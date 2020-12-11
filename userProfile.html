@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ATL|Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__checkbox" />
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+            </span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="index.html" class="navigation__link">Home</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="about.html" class="navigation__link">About ATL</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Projects</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="gallery.html" class="navigation__link">Gallery</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" class="navigation__link">Blog</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="contact.html" class="navigation__link">Contact</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="SignIn-Up.html" class="navigation__link-logout">Sign In/Sign Up</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="userProfile.html" class="navigation__link-login">Dashboard</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" onclick="signOut()" class="navigation__link-login">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Dashboard</span>
+                <span class="heading-primary--sub"></span>
+            </h1>
+            
+        </div>
+    </header>
+    <!-- partial -->
+    <div class="container mt-2">
+        <div class="card">
+            <div class="card-body">
+                <form id="post-form">
+                    <center>
+                        <h3>Make A Blog</h3>
+                    </center>
+                    <textarea id="post" class="form-control" placeholder="What's on your mind..."></textarea>
+                    <input type="file" class="form-control" id="image" accept="images/*">
+                    <div class="text-center">
+                        <button type="button" class="btn btn-success" onclick="upload()">Upload</button>
+                    </div>
+    
+                </form>
+            </div>
+    
+        </div>
+
+
+
+    <script src="./js/main.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+
+</body>
+
+</html>
