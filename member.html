@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ATL|Members</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/members.css">
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+
+</head>
+
+<body>
+    <!-- partial:index.partial.html -->
+    <div class="navigation">
+        <input type="checkbox" id="navi-toggle" class="navigation__checkbox" />
+
+        <label for="navi-toggle" class="navigation__button">
+            <span class="navigation__icon">
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+                <span class="navigation__icon-span">&nbsp;</span>
+            </span>
+        </label>
+
+        <div class="navigation__background">&nbsp;</div>
+
+        <nav class="navigation__nav">
+            <ul class="navigation__list">
+                <li class="navigation__item">
+                    <a href="index.html" class="navigation__link">Home</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="about.html" class="navigation__link">About ATL</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="project.html" class="navigation__link">Projects</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="gallery.html" class="navigation__link">Gallery</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="blog.html" class="navigation__link">Blog</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="contact.html" class="navigation__link">Contact</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="SignIn-Up.html" class="navigation__link-logout">Sign In/Sign Up</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="userProfile.html" class="navigation__link-login">Dashboard</a>
+                </li>
+                <li class="navigation__item">
+                    <a href="#" onclick="signOut()" class="navigation__link-login">Logout</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <header class="header">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Members</span>
+                <span class="heading-primary--sub"></span>
+            </h1>
+
+        </div>
+    </header>
+    <!-- partial -->
+        <!-- Our team Section -->
+        <section id="team" class="team content-section">
+            <div class="container">
+                <div class="row text-center">
+                    <div class="col-md-12">
+                        <h2>Our Team</h2>
+                        <h3 class="caption gray">Meet the people who make awesome stuffs</h3>
+                    </div><!-- /.col-md-12 -->
+        
+                    <div class="container">
+                        <div class="row">
+        
+                            <div class="col-md-4">
+                                <div class="team-member">
+                                    <figure>
+                                        <img src="http://www.mauritiusdsilva.com/themes/hallooou/assets/images/lauren-cox.jpg"
+                                            alt="" class="img-responsive">
+                                        <figcaption>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae asperiores
+                                                mollitia.</p>
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                                                <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <h4>Lauren Cox</h4>
+                                    <p>Creative Director</p>
+                                </div><!-- /.team-member-->
+                            </div><!-- /.col-md-4 -->
+        
+                            <div class="col-md-4">
+                                <div class="team-member">
+                                    <figure>
+                                        <img src="http://www.mauritiusdsilva.com/themes/hallooou/assets/images/jessie-barnett.jpg"
+                                            alt="" class="img-responsive">
+                                        <figcaption>
+                                            <p>Neque minima ea, a praesentium saepe nihil maxime quod esse numquam explicabo
+                                                eligendi.</p>
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                                                <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <h4>Jessie Barnett</h4>
+                                    <p>UI/UX Designer</p>
+                                </div><!-- /.team-member-->
+                            </div><!-- /.col-md-4 -->
+        
+                            <div class="col-md-4">
+                                <div class="team-member">
+                                    <figure>
+                                        <img src="http://www.mauritiusdsilva.com/themes/hallooou/assets/images/terry-fletcher.jpg"
+                                            alt="" class="img-responsive">
+                                        <figcaption>
+                                            <p>Temporibus dolor, quisquam consectetur molestias, veniam voluptatum. Beatae alias
+                                                omnis totam.</p>
+                                            <ul>
+                                                <li><a href=""><i class="fa fa-facebook fa-2x"></i></a></li>
+                                                <li><a href=""><i class="fa fa-twitter fa-2x"></i></a></li>
+                                                <li><a href=""><i class="fa fa-linkedin fa-2x"></i></a></li>
+                                            </ul>
+                                        </figcaption>
+                                    </figure>
+                                    <h4>Terry Fletcher</h4>
+                                    <p>Web Developer</p>
+                                </div><!-- /.team-member-->
+                            </div><!-- /.col-md-4 -->
+        
+        
+                        </div><!-- /.row -->
+                    </div><!-- /.container -->
+        
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section><!-- /.our-team -->
+
+    
+
+    <script src="./js/main.js"></script>
+    <script src="./js/firebaseConfig.js"></script>
+
+</body>
+
+</html>
