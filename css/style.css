@@ -25,7 +25,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 0;
+  margin-bottom: 6rem;
 }
 .heading-primary--main {
   display: block;
