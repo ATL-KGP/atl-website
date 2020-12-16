@@ -321,9 +321,9 @@ login links css
 
 .header {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-  height: 95vh;
+  height: 55vh;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 30vh, 0 100%);
 }
 .header__text-box {
   position: absolute;
@@ -332,64 +332,58 @@ login links css
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
- * {
-          box-sizing: border-box;
-        }
-        .mySlides {display: none;}
-        img {vertical-align: middle;}
-        .slideshow-container {
-        max-width: 2000px;
-        position: relative;
-        margin: auto;
-        }
-        .text {
-        color: #f2f2f2;
-        font-size: 15px;
-        padding: 8px 12px;
-        position: absolute;
-        bottom: 8px;
-        width: 100%;
-        text-align: center;
-        }
-        .numbertext {
-        color: #f2f2f2;
-        font-size: 12px;
-        padding: 8px 12px;
-        position: absolute;
-        top: 0;
-        }
-        .dot {
-        height: 15px;
-        width: 15px;
-        margin: 0 2px;
-        background-color: #bbb;
-        border-radius: 50%;
-        display: inline-block;
-        transition: background-color 0.6s ease;
-        }
-
-        .active {
-        background-color: #717171;
-        }
-        .fade {
-        -webkit-animation-name: fade;
-        -webkit-animation-duration: 2s;
-        animation-name: fade;
-        animation-duration: 1.5s;
-        }
-        @-webkit-keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-        }
-        @keyframes fade {
-        from {opacity: .4} 
-        to {opacity: 1}
-        }
-        @media only screen and (max-width: 300px) {
-        .text {font-size: 11px}
-        }
-
+.carousel {
+  width: 100vw;
+  height: 450px;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.carousel:hover .controls {
+  opacity: 1;
+}
+.carousel .controls {
+  opacity: 0;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 99999;
+  transition: all ease 0.5s;
+}
+.carousel .controls .control {
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  opacity: .5;
+  transition: ease .3s;
+  cursor: pointer;
+}
+.carousel .controls .control:hover {
+  opacity: 1;
+}
+.carousel .slides {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  display: flex;
+  width: 100%;
+  transition: 1s ease-in-out all;
+}
+.carousel .slides .slide {
+  min-width: 100%;
+  min-height: 250px;
+  height: auto;
+}
         .column {
           float: left;
           width: 50%;
