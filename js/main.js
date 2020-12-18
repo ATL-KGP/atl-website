@@ -51,3 +51,6 @@ document.querySelector("#signup").addEventListener("click", () => {
     });
 
 })();
+
+//carousel
+
