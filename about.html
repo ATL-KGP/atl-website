@@ -9,7 +9,56 @@
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 
 </head>
+<style>
+* {
+  box-sizing: border-box;
+}
 
+.column {
+  float: left;
+  width: 25%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    .about_header{
+        background-color: white;
+        color: green;
+        font-size:20px; 
+        margin: 40px;
+        padding: 1px;
+    }
+    .text{
+        background-color: white;
+        text-align: justify;
+        color: rgb(0, 0, 0);
+        font-size: 25px; 
+        margin: 40px;
+        padding: 1px;
+    }
+    .text_list{
+        background-color: white;
+        color: rgb(0, 0, 0);
+        font-size: 25px; 
+        margin: 0px;
+        text-align: justify;
+        padding-left: 2cm;
+    }
+    .text_list_p{
+        background-color: white;
+        color: rgb(0, 0, 0);
+        font-size: 25px; 
+        margin: 0px;
+        padding-left: 1cm;
+        padding-right: 1cm;
+        text-align: justify;
+    }
+</style>
 <body>
     <!-- partial:index.partial.html -->
     <div class="navigation">
@@ -70,7 +119,73 @@
         </div>
     </header>
     <!-- partial -->
+    <br>
+    <div class="about_header">
+    <center><h1><b>ATAL TINKERING LAB(ATL) </b></h1>
+    <h2>Kendriya Vidyalaya No-2 Kharagpur </h2>
+    </center>
+    </div>
 
+    <div class="text">
+            <p>
+            ATL at Kendriya Vidyalaya No-2 Kharagpur is functioning since August- 2019. The lab is 
+            established under the ATAL INNOVATION MISSION (AIM) , a flagship initiative set by the 
+            NITI AAYOG , Govt of India, to promote innovations and entrepreneurship in the country.
+            <br>
+            ATL is an approach  to create an environment of scientific temperament, innovation, creativity amongst Indian Students. It is a step towards a new India. Since the last few decades, our education system has seen a paradigm shift. Today, with this approach of inculcating Hands on Methodology in the current education scenario we have resolved the need of the hour
+            <br>
+            ATL would teach students essential 21st-century skills which will help them in developing their professional and personal skills. Skilled India is the need of the hour and each step taken this dream should be welcomed and we should work towards it together for a better India.
+            <br>
+            Young children will get a chance to work with tools and equipment to understand what, how and why aspects of STEM (Science, Technology, Engineering, and Math). The objective of this scheme is to foster curiosity, creativity, and imagination in young minds and inculcate skills such as design mindset, computational thinking, adaptive learning, physical computing etc. 
+            <br>
+            ATL contains educational and learn “do it yourself” kits and equipment on – science, electronics, robotics, open source microcontroller boards, sensors and 3D printers etc.
+            </p>
+    </div>
+    <h2 style="padding-left: 1cm;color: green;font-size: 40px;">
+        Objectives of ATL's in India 
+    </h2>
+    
+    <div class="text_list">
+        <ul >
+            <li>Creating workspaces for young minds </li>
+            <li>Empowering youths</li>
+            <li>Helping build innovative solutions</li>
+            <li>Creating young high school innovators</li>
+        </ul>
+    </div>
+    <br>
+    <br>
+    <h2 style="padding-left: 1cm;color: green;font-size: 40px;">
+        Vision of ATL's in India
+    </h2>
+    <div class="text_list_p">
+        <p>
+            Creating a problem solving innovative mindset in school students and a culture of innovation-leveraging emerging technologies in order to achieve a target of one million Neoteric child innovators in India by 2020.
+        </p>
+    </div>
+    <div class="row">
+        <div class="column">
+          <img src="./assets/profiles/ramanan.jpg" alt="Snow" style="width:100%">
+          <center><h1 style="color: rgb(0, 0, 0);">Dr. R. Ramanan</h1></center>
+          <center><h2>Atal Innovation mission NITI Aayog Govt. of India</h2></center>
+        </div>
+        <div class="column">
+          <img src="./assets/profiles/principlesir.jpg" alt="Snow" style="width:100%">
+          <center><h1 style="color: rgb(0, 0, 0);">Sh. Kishor Kumar</h1></center>
+          <center><h2>Ex Principal KV-2 Kharagpur, Architect of ATL KV-2 kharagpur</h2></center>
+        </div>
+        <div class="column">
+          <img src="./assets/profiles/vpsir.jpg" alt="Forest" style="width:100%">
+          <center><h1 style="color: rgb(0, 0, 0);">Sh. Narendar Singh</h1></center>
+          <center><h2>Principal(I/C) Chairman, AAC ATL KV-2 Kharagpur</h2></center>
+        </div>
+        <div class="column">
+          <img src="./assets/profiles/nksir.jpg" alt="Mountains" style="width:100%">
+          <center><h1 style="color: rgb(0, 0, 0);">Sh Nirmalendu Kar</h1></center>
+          <center><h2>PGT(Chemistry) Convenor AAC, ATL KV-2 Kharagpur</h2></center>
+        </div>
+      </div>
+      
     <script src="./js/main.js"></script>
     <script src="./js/firebaseConfig.js"></script>
 
