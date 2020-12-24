@@ -6,6 +6,8 @@
     <title>ATL|Gallery</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href ="./css/gallery.css">
+    <link rel="stylesheet " href="./css/members.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 
@@ -47,13 +49,13 @@
                     <a href="#" class="navigation__link">Blog</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link">Contact</a>
+                    <a href="contact.html" class="navigation__link">Contact</a>
                 </li>
                 <li class="navigation__item">
                     <a href="SignIn-Up.html" class="navigation__link-logout">Sign In/Sign Up</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="#" class="navigation__link-login">Dashboard</a>
+                    <a href="userProfile.html" class="navigation__link-login">Dashboard</a>
                 </li>
                 <li class="navigation__item">
                     <a href="#" onclick="signOut()" class="navigation__link-login">Logout</a>
@@ -74,73 +76,130 @@
     <section class="container">
         <div class="image-gallery">
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49359075391_0aac1de6de_k.jpg" width="1536" height="2048"
+                <img src="https://lh4.googleusercontent.com/XIktCIo4M_6Hzl-IL_4iOG2xbpgOVAaJu0cIb27ETDZKyxsKK20M4kptL3xZ2fY-x4ruHzgHxPx-bz9nq9wD=w1920-h832-rw"  width="1536" height="2048"
                     alt="Street Art Los Angeles" class="item item1" />
             </div>
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49359274717_53f16db5d0_k.jpg" width="2048" height="1536"
+                <img src="https://lh3.googleusercontent.com/Y8zbmDTMvLGQo068u52QcVeADWjS__KbIPHpbpffZWrTpfwarqeQN9mMYcDe9jhD3VUlyke88CtVJLa34KSH=w826-h832-rw" width="2048" height="1536"
                     alt="Paseo Público hacia el Astrup Fearnley Museet, Oslo" class="item item2" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49359272807_b3d8d130e7_k.jpg" width="1536" height="2048"
+                <img src="https://lh6.googleusercontent.com/lpfDtZe6B5SvFSYf4q8zHFCx_5GLQYQbpKwzgRSc2NQCOntW1RCOfg2i-x1k4mcYIsxUxHcOoE97D-1TodQy=w826-h832-rw"  width="1536" height="2048"
                     alt="Salida del Acuario de Dinamarca en Kastrup" class="item item3" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49358596853_e51c4cafce_k.jpg" width="2048" height="2048"
+                <img src="https://lh6.googleusercontent.com/sNo1f3JrRf8x7-VpffC9OGONXjQzv6lYhrzKUxTouNvAXxkMTPveGuZuF4pWWDzXuLOZGg836QsAQOur9D55=w1920-h832-rw" width="2048" height="2048"
                     alt="VM House - Conjunto de viviendas por el estudio BIG en Copenhague" class="item item4" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49358596558_31c27cce2b_k.jpg" width="2048" height="1536"
+                <img src="https://lh5.googleusercontent.com/1weFsXq05Thoun_YQg2oKft05E2OtgM-WX-p4C4D5RXTrTeAZHt7exZtYwyEugyIu3p8YzyiGy4YLMgydAzs=w1920-h832-rw" width="2048" height="1536"
                     alt="Fachadas coloridas en Nyhavn, Copenhague" class="item item5" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49359271077_c4dbe057a9_k.jpg" width="1536" height="2048"
+                <img src="https://lh5.googleusercontent.com/Df1xVSV81Y1LCVnOdecyJoA2kdlSD8NPeoIF8Bt47SoX8DrXmGXnb6mxuiSHHi3cilbnecBg08fYCoknrPmv=w1920-h832-rw" width="1536" height="2048"
                     alt="Morfología paramétrica en el Acuario de Dinamarca" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49358595383_dd87816f3e_k.jpg" width="2048" height="2048"
+                <img src="https://lh4.googleusercontent.com/j4APAi5cGq7XqfnTZFXslUkgGnvTZ2-RqbA_a3UW8zNwsNtmHwc2lARxzWdDNnweH9M7RT6R8igcF-WvM4Nm=w1920-h832-rw" width="2048" height="2048"
                     alt="Frente de la Ópera de Copenhague" class="item item7" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49358613888_72d9ca85fd_k.jpg" width="1536" height="2048"
+                <img src="https://lh4.googleusercontent.com/bg5JuMlK5naXog9aMGOuZPj66DB6gdgYiVcnHMiGdpO-Ct86FW8t97XLfhcsZk95s41qHm5xNjDh9Q9emZdb=w1920-h832-rw" width="1536" height="2048"
                     alt="Bradbury Builnding Ojo de Pez" class="item item8" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49359065166_b0c6f641b2_k.jpg" width="1536" height="2048"
+                <img src="https://lh6.googleusercontent.com/eJZrCIzKmknlPfOIgObZf1kbXDYZKmN5qqORPUDPNAh1XDOyVj5YuqghyCo5SzPPO7ffJrEn3qUxFTr0BwVL=w1920-h832-rw" width="1536" height="2048"
                     alt="Street Art en las calles de Copenhague" class="item item9" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49358602418_659204324d_k.jpg" width="2048" height="2048"
+                <img src="https://lh4.googleusercontent.com/JEy8KcAkfm48p4j5pARKLGuKPY0rtnXRRdeFZH6JhlViF6l-D215T3aIbfGW1Oz245Nx8QFw0EclEGo1dKRm=w1960-h1840-rw" width="2048" height="2048"
                     alt="8 House - Conjunto de viviendas del estudio BIG en Copenhague" class="item item10" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49359066071_ef16011a4e_k.jpg" width="1536" height="2048"
+                <img src="https://lh3.googleusercontent.com/Gso2RPN5fq8NpIHGcbmVDOvro0sUOX_Tp7HaZ6mqOo-zyKohcKYJ-JduxrbjKnZ3xVHpAXJchW5Rqn2oHIBq=w1920-h832-rw" width="1536" height="2048"
                     alt="Paseo público en Copenhague" class="item item11" />
             </div>
     
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49358593803_94c505ed56_k.jpg" width="2048" height="1535"
+                <img src="https://lh4.googleusercontent.com/rqeYCmIsWfTT8SpC_OOJ-v1124wpNy7LRTWZtza8J0JpaeohhqDFWmq3DH1rs8qB-ySM-hKXcIPj8aNWumOx=w826-h832-rw" width="2048" height="1535"
                     alt="Tranvía en las calles de Helsinski" class="item item12" />
             </div>
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49359068106_5c48bacd62_k.jpg" width="1536" height="2048"
+                <img src="https://lh5.googleusercontent.com/VhHUzlh57diWW0xqNU63qy2JXg9MXLP1YSsIx3qao0nKu5LoAIDdKEYG9hGTRZULpUCYalQaJfVyip_UL6xk=w1920-h832-rw" width="1536" height="2048"
                     alt="Oslo Palace" />
             </div>
             <div class="img">
-                <img src="https://live.staticflickr.com/65535/49358600543_d69ac81d6c_k.jpg" width="2048" height="873"
+                <img src="https://lh6.googleusercontent.com/OgOWj8OgeVsnHNoZEgY4MpVXuBY5i9DcXqbPA4HMebQoYYrnxcIqmFoci2XZ-fGBU91JAELI-vQAyRPyobZP=w1920-h832-rw" width="2048" height="873"
                     alt="09082018-IMG_9919" />
             </div>
         </div>
     </section>
+        <!-- Site footer -->
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <h6>About</h6>
+                        <p class="text-justify">
+                            ATL at Kendriya Vidyalaya No-2 Kharagpur is functioning since August- 2019. The lab is established
+                            under the ATAL INNOVATION MISSION (AIM), a flagship initiative set by the NITI AAYOG , Govt of
+                            India, to promote innovations and entrepreneurship in the country.
+                        </p>
+                    </div>
+        
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Categories</h6>
+                        <ul class="footer-links">
+                            <li><a href="">Robotics</a></li>
+                            <li><a href="">3D Printing</a></li>
+                            <li><a href="">Drone Development</a></li>
+                            <li><a href="">Web Development</a></li>
+                            <li><a href="">Projects</a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </div>
+        
+                    <div class="col-xs-6 col-md-3">
+                        <h6>Quick Links</h6>
+                        <ul class="footer-links">
+                            <li><a href="./about.html">About Us</a></li>
+                            <li><a href="./contact.html">Contact Us</a></li>
+                            <li><a href="">Contribute</a></li>
+                            <li><a href="">Privacy Policy</a></li>
+                            <li><a href="">Sitemap</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                        <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by
+                            <a href="./index.html">Atal Tinkering Lab KV 2 Kharagpur</a>.
+                        </p>
+                    </div>
+        
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                        <ul class="social-icons">
+                            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a class="dribbble" href="#"><i class="fa fa-youtube"></i></a></li>
+                            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
     
     
         <script src="./js/main.js"></script>
