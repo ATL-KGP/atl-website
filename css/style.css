@@ -321,9 +321,9 @@ login links css
 
 .header {
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
-  height: 55vh;
+  height: 70vh;
   position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 30vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 55vh, 0 100%);
 }
 .header__text-box {
   position: absolute;
@@ -334,7 +334,7 @@ login links css
 }
 .carousel {
   width: 100%;
-  height: 450px;
+  height: 500px;
   border-radius: 3px;
   overflow: hidden;
   position: relative;
