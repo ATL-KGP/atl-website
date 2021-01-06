@@ -388,11 +388,7 @@ login links css
   width: 100%;
   height: fit-content;
 }
-        .column {
-          float: left;
-          width: 50%;
-          padding: 0 10px;
-        }
+        
         .row1 {margin: 0 auto;
         width:100%;}
         .row1:after {
@@ -400,16 +396,29 @@ login links css
           display: table;
           clear: both;
         }
-        @media screen and (max-width: 600px) {
-          .column {
-            width: 100%;
-            display: block;
-            margin-bottom: 20px;
-          }
-        }
+        
         .card {
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           padding: 16px;
           text-align: center;
           background-color: #f1f1f1;
+          height: 8cm;
         }
+        .column {
+          float: left;
+          width: 100%;
+          padding: 0 10px;
+        }
+        @media only screen and (min-width: 300px) {
+          /* For tablets: */
+          .column {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .column {width: 50%;}
+        }
+        .card_text{
+          text-align: center;
+        }
+      
+        
