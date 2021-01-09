@@ -1,7 +1,22 @@
+<!--
+1. reduce height of green area.
+2. Dashboard ready.
+3. downloads PAGE.
+4. Notice Archive.
+5. members PAGE.
+6. lab members.
+7. lab resource pdf.
+8. counter.
+9. latest video.
+10. background design
+-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <title>ATL|Members</title>
     <link rel="stylesheet" href="./css/style.css">
@@ -10,23 +25,13 @@
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 <style>
-    <meta name="viewport"
-      content="
-          height = [pixel_value | "device-height"] ,
-          width = [pixel_value | "device-width"] ,
-          initial-scale = float_value ,
-          minimum-scale = float_value ,
-          maximum-scale = float_value ,
-          user-scalable = ["yes" | "no"]
-          " />
     [class*="coloum-"] {
-        width: 50%;
         float: left;
         padding: 15px;
     }
     /* For mobile phones: */
     @media only screen and (min-width: 320px) {
-        .coloum-m-1 {width: 50%;}
+        .coloum-m-1 {max-width: 50%;}
       }
   @media only screen and (min-width: 600px) {
     /* For tablets: */
