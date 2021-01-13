@@ -189,10 +189,10 @@ body {
 }
 .navigation__item {
   margin: 1rem;
-  counter-increment: list;
+  
 }
 .navigation__link::before {
-  content: "0" counters(list,"");
+  
   padding-right: 1.2rem;
 }
 .navigation__link:link, .navigation__link:visited {
@@ -217,7 +217,7 @@ body {
 login links css
 */
 .navigation__link-login::before {
-  content: "0" counters(list,"");
+  
   padding-right: 1.2rem;
 }
 .navigation__link-login:link, .navigation__link-login:visited {
@@ -240,7 +240,7 @@ login links css
 
 /*logout link*/
 .navigation__link-logout::before {
-  content: "0" counters(list,"");
+
   padding-right: 1.2rem;
 }
 .navigation__link-logout:link, .navigation__link-logout:visited {
