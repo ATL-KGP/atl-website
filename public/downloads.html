@@ -1,24 +1,10 @@
-<!--
-1. reduce height of green area.
-2. Dashboard ready.
-3. downloads PAGE.
-4. Notice Archive.
-5. members PAGE.
-6. lab members.
-7. lab resource pdf.
-8. counter.
-9. latest video.
-10. background design.
-11 serial no removal.
--->
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
     <meta charset="UTF-8">
-    <title>ATL|Members</title>
+    <title>ATL|Downloads</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/members.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -83,18 +69,13 @@
     <header class="header">
         <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">Members</span>
+                <span class="heading-primary--main">Downloads</span>
                 <span class="heading-primary--sub"></span>
             </h1>
 
         </div>
     </header>
-    <br>
-    <!-- Enter the sheet link here -->
-    <div class="container-iframe"> 
-        <iframe class="responsive-iframe" src=""></iframe>
-      </div>
-      <br>
+    
        <!-- Site footer -->
        <footer class="site-footer">
         <div class="container">
@@ -155,19 +136,6 @@
     </footer>
     <script src="./js/main.js"></script>
     <script src="./js/firebaseConfig.js"></script>
-    <script>
-        // When the user scrolls the page, execute myFunction 
-        window.onscroll = function() {myFunction()};
-        
-        function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
-        }
-        </script>
-        
-
 </body>
 
 </html>

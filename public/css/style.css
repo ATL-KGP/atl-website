@@ -19,8 +19,7 @@ body {
   line-height: 1.7;
   color: #777;
   padding: 0;
-  background: url(../assets/3637164.jpg) repeat;
-  
+  background: url(../assets/3637164.jpg) repeat ;
   padding-bottom: 0;
 }
 
@@ -347,13 +346,15 @@ login links css
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
           padding: 16px;
           text-align: center;
-          background-color: #f1f1f1;
+          background-color: #bafcf8c9;
           height: 8cm;
         }
         .column {
           float: left;
           width: 100%;
           padding: 5 10px;
+          padding-left: 3px;
+          padding-right: 3px;
         }
         @media only screen and (min-width: 300px) {
           /* For tablets: */
