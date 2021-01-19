@@ -9,7 +9,7 @@
 
 
 body {
-	background: #ffffff;
+	
 	color: #333;
 	font-weight: normal;
 	font-size: 1em;
@@ -57,7 +57,7 @@ input:focus, textarea:focus, keygen:focus, select:focus {
 .section1 h1 {
 	font-size: 40px;
 	color: #55c57a;
-	font-weight: normal;
+	font-weight:bold;
 }
 
 .section2 {
