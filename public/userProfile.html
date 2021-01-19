@@ -3,12 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>ATL|Home</title>
+    <title>ATL|Dashboard</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet " href="./css/members.css">
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-storage.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
 </head>
 
@@ -76,7 +81,32 @@
     <center><h1>Name</h1></center>
     <center><h2>Permission : user or developer or admin or superuser</h2></center>
     
-  
+        <div>
+        
+        
+            <div class="form-group">
+                <label for="nTitle">Title</label>
+                <input class="form-control" id="noticeTitle" placeholder="Enter Notice Title">
+            </div>
+        
+            <div class="form-group">
+                <label for="nbody">Notice Body</label>
+                <textarea class="form-control" id="noticeBody" placeholder="Enter notice body"></textarea>
+            </div>
+        
+        
+        
+            <!-- When you click this button, trigger the submit event on this form. -->
+        
+        
+        
+        
+            <input type="file" id="files" /><br /><br />
+            <button id="send">Upload</button>
+            <p id="uploading"></p>
+            <progress value="0" max="100" id="progress"></progress>
+            <br /><br /><br /><br />
+
 
 
 
@@ -143,6 +173,92 @@
 
     <script src="./js/main.js"></script>
     <script src="./js/firebaseConfig.js"></script>
+    <script>var noticeadd = firebase.database().ref("notice");
+        //// CHOICE /////
+        var files = [];
+        document.getElementById("files").addEventListener("change", function (e) {
+            files = e.target.files;
+        });
+
+        ///// SEND FILES //////
+        document.getElementById("send").addEventListener("click", function () {
+
+            var head = $("#noticeTitle").val();
+            var body = $("#noticeBody").val();
+
+            // Push a new recommendation to the database using those values
+
+
+            if (files.length != 0) {
+                for (let i = 0; i < files.length; i++) {
+                    var storage = firebase.storage().ref();
+                    var upload = storage.child(`notice/${files[i].name}`).put(files[i]);
+
+                    noticeadd.push({
+                        "head": head,
+                        "nbody": body,
+                        "pdf": files[i].name
+                    });
+
+                    upload.on("state_changed", function progress(snapshot) {
+                        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        document.getElementById("progress").value = percentage;
+                    },
+
+                        function error() { alert("Error uploading file."); },
+
+                        function complete() { document.getElementById("uploading").innerHTML += `${files[i].name} uploaded <br>`; });
+                }
+
+            } else { alert("No file chosen."); }
+        });
+        ////////////////////////////////////
+
+        // GET URL ////////////////////
+        document.getElementById("get_url").addEventListener("click", function () {
+
+            var get_url_file = document.getElementById("name").value;
+
+            var storage = firebase.storage().ref(get_url_file);
+
+
+            storage.getDownloadURL().then(function (url) { document.getElementById("response").innerHTML += `${url}  <br />`; })
+                .catch(function (error) { alert("Error encountered."); });
+
+        });
+        ////////////////////////////////////
+
+        //get url
+
+
+        function getFileUrl(filename) {
+            //create a storage reference
+
+
+            var storage = firebase.storage().ref("notice/" + filename);
+
+            //get file url
+            storage
+                .getDownloadURL()
+                .then(function (url) {
+                    console.log(url);
+                })
+                .catch(function (error) {
+                    console.log("error encountered");
+                });
+        }
+
+        ///////////////////////////////////
+
+
+        // LIST FILES ////////////////////
+        document.getElementById("list_files").addEventListener("click", function () {
+            var storageRef = firebase.storage().ref();
+            storageRef.listAll().then(function (result) {
+                result.items.forEach(function (urlFile) { document.getElementById("response_list").innerHTML += `${urlFile}  <br />`; });
+            }).catch(function (error) { alert("No file chosen."); });
+        });
+</script>
 
 </body>
 
