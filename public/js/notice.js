@@ -52,6 +52,8 @@ var geturl;
             snapshot.forEach(function (data) {
                 var val = data.val();
                 content += '<a href="#" id="link" target="_blank"><p style="color: blue;">' + val.head + '</p> </a>';
+
+               
                 
 
                 var a_link = val.pdf;
@@ -60,7 +62,9 @@ var geturl;
                 checkURL.then(url => {
                     geturl = url;
                     //content += '<td><a href="'+'#'+'">' + val.pdf + '</a></td>';
-                    console.log(geturl);
+                    console.log("file url:"+geturl);
+                    
+                    
                     document.getElementById("link").href = url;
 
                 });
