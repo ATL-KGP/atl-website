@@ -11,11 +11,45 @@
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
 <style>
-  
+    .row_document {margin: 0 auto;
+        width:100%;}
+        .row_document:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        .card_document {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          padding: 16px;
+          text-align: center;
+          background-color: #bafcf8c9;
+          height: 4cm;
+        }
+        .column_document {
+          float: left;
+          width: 100%;
+          padding: 5 10px;
+          padding-left: 3px;
+          padding-right: 3px;
+        }
+        @media only screen and (min-width: 400px) {
+          /* For tablets: */
+          .column_document {width: 100%;}
+        }
+        @media only screen and (min-width: 768px) {
+          /* For desktop: */
+          .column_document {width: 25%;}
+        }
+        .card_document_text{
+          text-align: center;
+          padding-top: 1.5cm;
+        }
 </style>
 </head>
 
 <body>
+
     <!-- partial:index.partial.html -->
     <div class="navigation">
         <input type="checkbox" id="navi-toggle" class="navigation__checkbox" />
@@ -42,7 +76,7 @@
                     <a href="about.html" class="navigation__link">About ATL</a>
                 </li>
                 <li class="navigation__item">
-                    <a href="project.html" class="navigation__link">Projects</a>
+                    <a href="./downloads.html" class="navigation__link">Downloads</a>
                 </li>
                 <li class="navigation__item">
                     <a href="gallery.html" class="navigation__link">Gallery</a>
@@ -75,7 +109,43 @@
 
         </div>
     </header>
-    
+    <br>
+    <div class="row_document">
+        <div class="column_document">
+            <div class="card_document card_document_text">
+                <a href="https://bit.ly/37MnSBj"target="_blank" download="Introduction to ATL"><p style="color:red;"> Introduction to ATL </p></a>
+            </div>
+        </div>
+        <div class="column_document">
+            <div class="card_document card_document_text">
+                <a href="https://bit.ly/37R8T9g"target="_blank" download="Introduction to Ideation "><p style="color: red;"> Introduction to Ideation </p></a>
+            </div>
+        </div>
+        <div class="column_document">
+            <div class="card_document card_document_text">
+            <a href="https://bit.ly/3nPZxAl"target="_blank" download="ATL Calendar"><p style="color: red;"> ATL Calendar</p></a>
+            </div>
+        </div>
+        <div class="column_document">
+            <div class="card_document card_document_text">
+                <a href="https://bit.ly/3pqJfhu"target="_blank" download="ATL Drone"><p style="color: red;"> ATL Drone</p></a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row_document">
+    <div class="column_document">
+        <div class="card_document card_document_text">
+            <a href="https://bit.ly/38FCYaW"target="_blank" download="Design Thinking & Presentation"><p style="color: red;"> Design Thinking & Presentation </p></a>
+        </div>
+    </div>
+    <div class="column_document">
+        <div class="card_document card_document_text">
+            <a href="http://bit.ly/3p3KNhF"target="_blank" download="Design Thinking & Presentation"><p style="color: red;"> ATL Item list </p></a>
+        </div>
+    </div>
+</div>
+    <br>
        <!-- Site footer -->
        <footer class="site-footer">
         <div class="container">
