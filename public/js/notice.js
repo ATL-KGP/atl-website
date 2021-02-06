@@ -64,8 +64,7 @@ var geturl;
                     //content += '<td><a href="'+'#'+'">' + val.pdf + '</a></td>';
                     console.log("file url:"+geturl);
                     
-                    
-                    document.getElementById("link").href = url;
+                    document.getElementById("link").href = geturl;
 
                 });
 
